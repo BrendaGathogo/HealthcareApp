@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "18377579809",
+    "project_id": "hospital-management-syte-b23b8",
+    "storage_bucket": "hospital-management-syte-b23b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18377579809:android:541770ba20a06185817260",
+        "android_client_info": {
+          "package_name": "com.example.hospitalmanagementsytem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18377579809-1h82v5lp793mvsvto7ncrul8g28gtclt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqtzHEzPVaR28XWg6AhON0X9a09GRUKK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18377579809-1h82v5lp793mvsvto7ncrul8g28gtclt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
