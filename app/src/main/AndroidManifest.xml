@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HospitalManagementSytem"
         tools:targetApi="31">
+        <activity
+            android:name=".ProcedureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArticlesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".maintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appbarmainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragmentchosendoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chosendoctoritemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".itempatientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".itemdiseaseordoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LabTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SurgeonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CardiologistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DieticianActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DentistActivity"
+            android:exported="false" />
         <activity
             android:name=".DoctorDetailsActivity"
             android:exported="false" />

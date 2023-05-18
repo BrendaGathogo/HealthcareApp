@@ -14,63 +14,55 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
-    lateinit var binding:ActivityRegisterBinding
-    lateinit var edtemail:EditText
-    lateinit var edtpassword:EditText
-    lateinit var edtconfirmpassword:EditText
-    lateinit var btnregister:Button
-    lateinit var loginredirect:TextView
-    private lateinit var auth: FirebaseAuth
+    private lateinit var binding:ActivityRegisterBinding
+    private lateinit var firebaseAuth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        edtemail=findViewById(R.id.editTextRegEmail)
-        edtpassword=findViewById(R.id.editTextRegPassword)
-        edtconfirmpassword=findViewById(R.id.editTextRegConfirmPassword)
-        btnregister=findViewById(R.id.buttonRegister)
-        loginredirect=findViewById(R.id.textViewExistingUser)
-        auth=Firebase.auth
+        firebaseAuth= FirebaseAuth.getInstance()
 
-        binding.buttonRegister.setOnClickListener {
-            SignUp()
-        }
-        binding.textViewExistingUser.setOnClickListener {
+        binding.textView.setOnClickListener {
             val intent=Intent(this,LoginActivity::class.java)
             startActivity(intent)
         }
+        binding.button.setOnClickListener {
+            val email=binding.emailEt.text.toString()
+            val pass=binding.passET.text.toString()
+            val confirmpass=binding.confirmPassEt.text.toString()
 
+            if(email.isNotEmpty() && pass.isNotEmpty() && confirmpass.isNotEmpty()){
+                if (pass==confirmpass){
+                    firebaseAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
+                        if (it.isSuccessful){
+                            val intent=Intent(this,HomeActivity::class.java)
+                            startActivity(intent)
 
-    }
+                        }else{
+                            Toast.makeText(this,it.exception.toString(),Toast.LENGTH_SHORT).show()
 
-    private fun SignUp() {
+                        }
+                    }
 
-            val regemail=binding.editTextRegEmail.text.toString()
-            val regpassword=binding.editTextRegPassword.text.toString()
-            val regconfirmpassword=binding.editTextRegConfirmPassword.text.toString()
-            if (regemail.isBlank() || regpassword.isBlank() ||regconfirmpassword.isBlank() ){
-                Toast.makeText(this,"Email and password can not be blank", Toast.LENGTH_LONG).show()
-                return
-            }  else if (regpassword != regconfirmpassword){
-                Toast.makeText(this,"Password do not match", Toast.LENGTH_LONG).show()
-                return
-
-            }
-            auth.createUserWithEmailAndPassword(regemail,regpassword).addOnCompleteListener(this) {
-                if (it.isSuccessful){
-                    Toast.makeText(this,"Signed successfully", Toast.LENGTH_LONG).show()
-                    val intent=Intent(this,LoginActivity::class.java)
-                    startActivity(intent)
-
-                    finish()
                 }else{
-                    Toast.makeText(this,"Failed to create", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Password is not matching",Toast.LENGTH_SHORT).show()
                 }
+            }else{
+                Toast.makeText(this,"Empty fields not allowed",Toast.LENGTH_SHORT).show()
 
             }
+        }
+
+
+
 
 
     }
+
+
+
+
 }

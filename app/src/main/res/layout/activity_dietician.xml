@@ -4,29 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1"
-    tools:context=".DoctorDetailsActivity">
+    tools:context=".DieticianActivity">
 
     <TextView
-        android:id="@+id/textViewDDName"
+        android:id="@+id/textViewDETitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="24/7 HealthCare"
-        android:textColor="@color/purple_200"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/textViewDDTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Family Physicians"
+        android:text="Dietician"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -40,13 +24,13 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/textViewDDTitle"
+        android:layout_below="@id/textViewDETitle"
         android:layout_margin="20dp"
         android:columnCount="1"
         android:rowCount="5">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/FP1"
+            android:id="@+id/DE1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -75,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DR.WANJIRU"
+                    android:text="DR.KITHINJI"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -83,7 +67,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile No. 0720555263"
+                    android:text="Mobile No. 0727800263"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -93,7 +77,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/FP2"
+            android:id="@+id/DE2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -122,7 +106,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DR.FELIX"
+                    android:text="DR.ELLEN"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -130,7 +114,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile No. 0729005263"
+                    android:text="Mobile No. 0729089063"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -140,7 +124,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/FP3"
+            android:id="@+id/DE3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -169,7 +153,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DR.NANCY"
+                    android:text="DR.AUSTIN"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -177,7 +161,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile No. 0729005290"
+                    android:text="Mobile No. 0727543290"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -187,7 +171,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/FP4"
+            android:id="@+id/DE4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -216,7 +200,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DR.ODHIAMBO"
+                    android:text="DR.KLEIN"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -224,7 +208,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile No. 0729456290"
+                    android:text="Mobile No. 0720789290"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -234,7 +218,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/FP5"
+            android:id="@+id/DE5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -263,7 +247,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DR.GRACE"
+                    android:text="DR.MERCY"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -271,7 +255,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile No. 0729443290"
+                    android:text="Mobile No. 0729473456"
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold" />
@@ -289,15 +273,12 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:id="@+id/buttonDDBack"
+        android:id="@+id/buttonDEBack"
         android:layout_height="wrap_content"
         android:text="BACK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.69"/>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

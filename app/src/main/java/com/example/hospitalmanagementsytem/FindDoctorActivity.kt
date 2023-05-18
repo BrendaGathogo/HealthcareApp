@@ -35,12 +35,12 @@ class FindDoctorActivity : AppCompatActivity() {
             startActivity(intent)
         }
         cdDietician.setOnClickListener {
-            val intent=Intent(this,DoctorDetailsActivity::class.java)
+            val intent=Intent(this,DieticianActivity::class.java)
             intent.putExtra("title","Dietician")
             startActivity(intent)
         }
         cdDentist.setOnClickListener {
-            val intent=Intent(this,DoctorDetailsActivity::class.java)
+            val intent=Intent(this,DentistActivity::class.java)
             intent.putExtra("title","Dentist")
             startActivity(intent)
         }
